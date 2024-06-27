@@ -40,6 +40,16 @@
             color: inherit;
             text-decoration: none;
         }
+
+        @keyframes clickAnimation {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .card.click-animate {
+            animation: clickAnimation 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -111,6 +121,14 @@
             event.preventDefault();
             const card = this.querySelector('.card');
             card.style.background = getRandomGradient();
+
+            // Add animation class to trigger the animation
+            card.classList.add('click-animate');
+
+            // Remove the animation class after it ends
+            card.addEventListener('animationend', function () {
+                card.classList.remove('click-animate');
+            }, { once: true });
         });
     </script>
 </body>
