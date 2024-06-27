@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .card {
+            background: linear-gradient(145deg, #dac6c6, #cadcf7);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            margin-top: 15vh;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -22,30 +41,34 @@
           </nav>
     </header>
     <main>
-        <section id="education">
-            <h2>Education</h2>
-            <p>Senior undergrad majoring in Computer Science.</p>
-        </section>
-        <section id="experience">
-            <h2>Experience</h2>
-            <p>Experience in backend development, business logic, data handling, DNS management, and more.</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>JavaScript, CSS, HTML</li>
-                <li>React, Node.js, Next.js</li>
-                <li>Python, Django, AI/ML</li>
-                <li>SQL, MongoDB</li>
-                <li>Sound and vocal engineering</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Developed a Tournament App using React and 'react-brackets'.</p>
-        </section>
+        <div class="background"></div>
+        <div class="card-container">
+            <section class="card">
+                <h2>Resume</h2>
+                <div id="education">
+                    <h3>Education</h3>
+                    <p>Senior undergrad majoring in Computer Science.</p>
+                </div>
+                <div id="experience">
+                    <h3>Experience</h3>
+                    <p>Experience in backend development, business logic, data handling, DNS management, and more.</p>
+                </div>
+                <div id="skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>JavaScript, CSS, HTML</li>
+                        <li>React, Node.js, Next.js</li>
+                        <li>Python, Django, AI/ML</li>
+                        <li>SQL, MongoDB</li>
+                    </ul>
+                </div>
+                <div id="projects">
+                    <h3>Projects</h3>
+                    <p>Developed a Tournament App using React and 'react-brackets'.</p>
+                </div>
+            </section>
+        </div>
     </main>
-    
     <footer>
         <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
