@@ -46,6 +46,18 @@ nav {
   font-size: 1.5rem;
 }
 
+/* Style for the nav links */
+.nav-links li {
+  display: inline-block;
+  margin: 0 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for nav links */
+.nav-links li:hover {
+  transform: scale(1.2);
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -294,7 +306,6 @@ section {
   object-fit: cover;
   object-position: center;
 }
-
 
 .about-containers {
   gap: 2rem;

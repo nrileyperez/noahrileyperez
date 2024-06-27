@@ -14,7 +14,14 @@
             width: 85%;
             max-width: 700px;
             margin-top: 15vh;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+            opacity: 0;
+            transform: translateY(300px);
+        }
+
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .card:hover {
@@ -130,6 +137,15 @@
                 card.classList.remove('click-animate');
             }, { once: true });
         });
+
+        function delayLoad() {
+            const card = document.querySelector('.card');
+            setTimeout(() => {
+                card.classList.add('show');
+            }, 500); // Adjust the delay time as needed
+        }
+
+        window.addEventListener('load', delayLoad);
     </script>
 </body>
 </html>
